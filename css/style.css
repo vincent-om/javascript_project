@@ -71,10 +71,18 @@ ul {
 }
 
 
-/* FORMAT CLASSESE  */
+/* FORMAT CLASSES  */
 .btn {
     background-color: green;
     padding: 0.5em 1.5em;
+}
+
+.active {
+    background-color: green;
+}
+
+.hover-border-bottom:hover {
+    border-bottom: 2px solid green;
 }
 
 /* STYLE THE NAVBAR  */
