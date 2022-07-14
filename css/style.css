@@ -61,8 +61,10 @@ body {
 .flex-direction-col {flex-direction: column;}
 .justify-content-center {justify-content: center;}
 .justify-content-space-between {justify-content: space-between;}
+.justify-content-space-around {justify-content: space-around;}
 .justify-content-end {justify-content: flex-end;}
 .align-items-center {align-items: center;}
+.align-self-center {align-self: center;}
 .gap-1em {gap: 1em;}
 
 .d-grid {display: grid;}
@@ -70,6 +72,9 @@ body {
 
 /* Padding properties  */
 .padding-1em {padding: 1em;}
+
+/* Margin properties  */
+.margin-1em {margin: 1em;}
 
 /* STYLE PARTICULAR ELEMENTS  */
 a {
