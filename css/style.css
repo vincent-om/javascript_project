@@ -18,7 +18,14 @@ body {
     background-color: var(--light);
 
     font-family: 'Courier New', Courier, monospace;
+
+    width: 100vw;
+    background-image: url(../assets/cow.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 }
+
 
 .container {
     width: min(100% - 4rem, 70rem);
