@@ -58,6 +58,9 @@ body {
 .align-items-center {align-items: center;}
 .gap-1em {gap: 1em;}
 
+.d-grid {display: grid;}
+.place-items-center {place-items: center;}
+
 /* Padding properties  */
 .padding-1em {padding: 1em;}
 
@@ -77,6 +80,14 @@ ul {
     padding: 0.5em 1.5em;
 }
 
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn .active {
+    border-bottom: 5px solid red;
+}
+
 .active {
     background-color: green;
 }
@@ -86,8 +97,6 @@ ul {
 }
 
 /* STYLE THE NAVBAR  */
-
-
 nav {
     font-weight: var(--font-weight-median);
 }
