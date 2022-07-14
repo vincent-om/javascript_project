@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --dark: rgba(0, 0, 0, 0.95);
+    --light: rgba(255, 255, 255, 0.95);
+    --font-weight-small: 200;
+    --font-weight-median: 600;
+    --font-weight-heavy: 900;
+    --font-size-small: 10px;
+    --font-size-median: 12px;
+    --font-size-large: 30px;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--light);
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    width: min(100% - 4rem, 70rem);
+    margin: auto;
+}
+
+/* Background and color  */
+.bg-dark {background: var(--dark);}
+.bg-light {background-color: var(--light);}
+
+.color-dark {color: var(--dark)}
+.color-light {color: var(--light)}
+.color-white {color: white}
+.color-blue {color: blue;}
+.color-red {color: red;}
+.color-green {color: green;}
+
+
+/* Font size and weight  */
+.font-weight-small {font-weight: var(--font-weight-small);}
+.font-weight-median {font-weight: var(--font-weight-median)}
+.font-weight-heavy {font-weight: var(--font-weight-heavy);}
+
+.font-size-small {font-size: var(--font-size-small);}
+.font-size-median {font-size: var(--font-size-median);}
+.font-size-large {font-size: var(--font-size-large);}
+
+.font-family-indie-flower {font-family: 'Indie Flower', cursive;}
+
+/* Display properties  */
+.d-flex {display: flex;}
+.flex-direction-row {flex-direction: row;}
+.flex-direction-col {flex-direction: column;}
+.justify-content-center {justify-content: center;}
+.justify-content-space-between {justify-content: space-between;}
+.justify-content-end {justify-content: flex-end;}
+.align-items-center {align-items: center;}
+.gap-1em {gap: 1em;}
+
+/* Padding properties  */
+.padding-1em {padding: 1em;}
+
+/* STYLE PARTICULAR ELEMENTS  */
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* FORMAT CLASSESE  */
+.btn {
+    background-color: green;
+    padding: 0.5em 1.5em;
+}
+
+/* STYLE THE NAVBAR  */
+
+
+nav {
+    font-weight: var(--font-weight-median);
+}
