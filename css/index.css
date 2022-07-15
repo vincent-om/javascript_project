@@ -62,3 +62,7 @@
 .icon-text {
     text-shadow: 0 0 3em black;
 }
+
+#farm-name {
+    border-bottom: 0.1em solid green;
+}
