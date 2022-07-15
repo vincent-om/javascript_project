@@ -27,15 +27,47 @@
         </div>
     </nav>
 
+    <div id="production-info" class="container">
+        <div>
+            <div id="add-production-info">
+                <h1>Add Sell Info</h1>
+            </div>
+            <div class="add-entry-form">
+                <form action="">
+                    <div class="prompt" class="d-flex flex-direction-col align-items-center">
+                        <h2><span class="enter-todays">Enter today's</span> <span class="color-white">sales</span></h2>
+                        <h1 class="color-white">DETAILS</h1>
+                    </div>
+                    <div class="d-flex flex-direction-col">
+                        <div class="d-flex flex-direction-row justify-content-space-between">
+                            <label for="customer-name">Customer Name</label>
+                            <input type="text" name="customer-name">
+                        </div>
+                        <div class="d-flex flex-direction-row justify-content-space-between">
+                            <label for="quantity-sold">Quantity Sold</label>
+                            <input type="text" name="customer-name">
+                        </div>
+                        <div class="d-flex flex-direction-row justify-content-space-between">
+                            <label for="selling-price">Selling Price</label>
+                            <input type="text" name="selling-price" value="45">
+                        </div>
+                    </div>
+                    <input type="submit" value="submit" class="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
     <div class="container display-none">
         <div>
             <h1 id="add-production-info">Add Production Info</h1>
         </div>
+
         <div class="add-entry-form">
             <form action="" class="d-flex flex-direction-col">
                 <div class="prompt" class="d-flex flex-direction-col align-items-center">
                     <h2><span class="enter-todays">Enter today's</span> <span class="color-white">production</span></h2>
-                    <h1 class="color-white">Amount</h1>
+                    <h1 class="color-white">AMOUNT</h1>
                 </div>
                 <div class="d-flex flex-direction-col">
                     <div class="d-flex flex-direction-row justify-content-space-between">
@@ -64,9 +96,7 @@
         </div>
     </div>
 
-    <div class="container">
-        what the fuck
-    </div>
+
     <script src="./js/formProcessing.js"></script>
 </body>
 </html>
