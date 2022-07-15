@@ -70,6 +70,11 @@ body {
 .d-grid {display: grid;}
 .place-items-center {place-items: center;}
 
+/* Text settings  */
+.text-align-center {
+    text-align: center;
+}
+
 /* Padding properties  */
 .padding-1em {padding: 1em;}
 

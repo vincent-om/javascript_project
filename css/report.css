@@ -4,6 +4,14 @@ body {
     justify-content: center;
 }
 
+.flex-basis-70pc {
+    flex-basis: 70%;
+}
+
+.flex-basis-30pc {
+    flex-basis: 30%;
+}
+
 #recap-header {
     text-align: center;
     background-color: green;
@@ -25,4 +33,38 @@ body {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     margin:auto;
+}
+
+.report-form > div:nth-child(2){
+    margin-bottom: 2rem;
+}
+
+.details {
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    border-radius: 1rem;
+    border: 0.1em solid red;
+    margin-top: 1em;
+    padding: 1.5em;
+    width: 20rem;
+}
+
+.details .header {
+    font-weight: 900;
+    margin-bottom: 0.5em;
+    border-bottom: 0.1em solid white;
+}
+
+.details .customer-name {
+    width: 12rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.details .particulars {
+    width: 15rem;
+}
+
+.customer:nth-child(2) {
+    margin-bottom: 0.8em;
 }
