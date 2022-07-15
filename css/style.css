@@ -111,4 +111,7 @@ ul {
 /* STYLE THE NAVBAR  */
 nav {
     font-weight: var(--font-weight-median);
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
