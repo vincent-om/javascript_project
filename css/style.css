@@ -30,6 +30,7 @@ body {
 .container {
     width: min(100% - 4rem, 70rem);
     margin: auto;
+    position: relative;
 }
 
 /* Background and color  */

@@ -27,81 +27,76 @@
         </div>
     </nav>
 
-    <div id="production-info" class="container">
+    <div class="container display-none">
+        <div id="add-production-info">
+            <h1>Add Production Info</h1>
+        </div>
+        <div class="add-entry-form">
+            <form action="">
+                <div class="prompt" class="d-flex flex-direction-col align-items-center">
+                    <h2><span class="enter-todays">Enter today's</span> <span class="color-white">sales</span></h2>
+                    <h1 class="color-white">DETAILS</h1>
+                </div>
+                <div class="particulars d-flex flex-direction-col">
+                    <div class="d-flex flex-direction-row justify-content-space-between">
+                        <label for="customer-name">Customer Name</label>
+                        <input type="text" name="customer-name">
+                    </div>
+                    <div class="d-flex flex-direction-row justify-content-space-between">
+                        <label for="quantity-sold">Quantity Sold</label>
+                        <input type="text" name="customer-name">
+                    </div>
+                    <div class="d-flex flex-direction-row justify-content-space-between">
+                        <label for="selling-price">Selling Price</label>
+                        <input type="text" name="selling-price" value="45">
+                    </div>
+
+                    <input type="submit" value="Submit Production Entry" class="submit">
+                </div>
+            </form>
+        </div>
+        <button class="go-to">Go to Add Production Info</button>
+    </div>
+
+
+    <div class="container">
         <div>
-            <div id="add-production-info">
-                <h1>Add Sell Info</h1>
+            <div>
+                <h1 id="add-sell-info">Add Sell Info</h1>
             </div>
             <div class="add-entry-form">
-                <form action="">
+                <form action="" class="d-flex flex-direction-col align-items-center">
                     <div class="prompt" class="d-flex flex-direction-col align-items-center">
-                        <h2><span class="enter-todays">Enter today's</span> <span class="color-white">sales</span></h2>
-                        <h1 class="color-white">DETAILS</h1>
+                        <h2><span class="enter-todays">Enter today's</span> <span class="color-white">production</span></h2>
+                        <h1 class="color-white">AMOUNT</h1>
                     </div>
-                    <div class="d-flex flex-direction-col">
+                    <div class="particulars d-flex flex-direction-col">
                         <div class="d-flex flex-direction-row justify-content-space-between">
-                            <label for="customer-name">Customer Name</label>
-                            <input type="text" name="customer-name">
+                            <label for="shed-A">Shed A</label>
+                            <input type="number" name="amount" id="amount">
                         </div>
                         <div class="d-flex flex-direction-row justify-content-space-between">
-                            <label for="quantity-sold">Quantity Sold</label>
-                            <input type="text" name="customer-name">
+                            <label for="shed-B">Shed B</label>
+                            <input type="number" name="amount" id="amount">
                         </div>
                         <div class="d-flex flex-direction-row justify-content-space-between">
-                            <label for="selling-price">Selling Price</label>
-                            <input type="text" name="selling-price" value="45">
+                            <label for="shed-C">Shed C</label>
+                            <input type="number" name="amount" id="amount">
                         </div>
-                    </div>
-                    <input type="submit" value="submit" class="submit">
+                        <div class="d-flex flex-direction-row justify-content-space-between">
+                            <label for="shed-D">Shed D</label>
+                            <input type="number" name="amount" id="amount">
+                        </div>
+                        <div class="d-flex flex-direction-row justify-content-space-between">
+                            <label for="shed-E">Shed E</label>
+                            <input type="number" name="amount" id="amount">
+                        </div>
+                    <input type="submit" value="Submit Sale Entry" class="submit">
                 </form>
             </div>
         </div>
-
-        <h2 class="go-to">Go to Add Production Info</h2>
-
+        <button class="go-to">Go to Add Sell Info</button>
     </div>
-
-    <div class="container display-none">
-        <div>
-            <h1 id="add-production-info">Add Production Info</h1>
-        </div>
-
-        <div class="add-entry-form">
-            <form action="" class="d-flex flex-direction-col">
-                <div class="prompt" class="d-flex flex-direction-col align-items-center">
-                    <h2><span class="enter-todays">Enter today's</span> <span class="color-white">production</span></h2>
-                    <h1 class="color-white">AMOUNT</h1>
-                </div>
-                <div class="d-flex flex-direction-col">
-                    <div class="d-flex flex-direction-row justify-content-space-between">
-                        <label for="shed-A">Shed A</label>
-                        <input type="number" name="amount" id="amount">
-                    </div>
-                    <div class="d-flex flex-direction-row justify-content-space-between">
-                        <label for="shed-B">Shed B</label>
-                        <input type="number" name="amount" id="amount">
-                    </div>
-                    <div class="d-flex flex-direction-row justify-content-space-between">
-                        <label for="shed-C">Shed C</label>
-                        <input type="number" name="amount" id="amount">
-                    </div>
-                    <div class="d-flex flex-direction-row justify-content-space-between">
-                        <label for="shed-D">Shed D</label>
-                        <input type="number" name="amount" id="amount">
-                    </div>
-                    <div class="d-flex flex-direction-row justify-content-space-between">
-                        <label for="shed-E">Shed E</label>
-                        <input type="number" name="amount" id="amount">
-                    </div>
-        
-                <input type="submit" value="submit" class="submit">
-            </form>
-        </div>
-
-        <h2 class="go-to">Go to Add Sell Info</h2>
-
-    </div>
-
 
     <script src="./js/formProcessing.js"></script>
 </body>
