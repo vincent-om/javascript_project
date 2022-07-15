@@ -8,11 +8,6 @@ body {
     display: none;
 }
 
-.visibility-hidden {
-    visibility: hidden;
-}
-
-
 #add-production-info {
     text-align: center;
     background-color: green;
