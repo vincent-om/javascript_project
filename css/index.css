@@ -33,8 +33,10 @@
 
 .grid-item {
     color: green;
-    width: 4em;
-    height: 4em;
+    text-align: center;
+    width: 5em;
+    height: 5em;
+    font-size: 1rem;
     border: 0.05em solid white;
     background-color: black;
     box-shadow: 2em 2em 2em black;
