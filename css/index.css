@@ -2,13 +2,21 @@
     display: grid;
     place-items: center;
     height: 100vh;
+    display: relative;
 }
 
 #welcome-text {
     font-size: 10rem;
     color: white;
     text-shadow: 0 0 2em black;
-    margin-top: 0.5em;
+    margin-top: 0.1em;
+}
+
+#because-farm-i-love-you {
+    position: relative;
+    top: -2em;
+    left: 1em;
+    font-size: 1.15rem;
 }
 
 .choices {
@@ -17,14 +25,20 @@
     grid-auto-rows: 1fr;
     gap: 1em;
     text-align: center;
+
+    padding: 5em;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .grid-item {
-    width: 7em;
-    height: 7em;
-    border: 0.3em white red;
-    background-color: rgba(0, 0, 0, 0.25);
+    color: green;
+    width: 4em;
+    height: 4em;
+    border: 0.05em solid white;
+    background-color: black;
     box-shadow: 2em 2em 2em black;
+    text-shadow: 1em 1em 2em white;
 }
 
 .grid-item:hover {
@@ -33,10 +47,18 @@
 }
 
 #family-icon-text {
-    font-size: 12rem;
+    font-size: 6rem;
+}
+
+.icon {
+    position: absolute;
+    bottom: 0;
+    right: 3em;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0 2em;
+    border: 0.1em solid white;
 }
 
 .icon-text {
-    position: relative;
-    text-shadow: 0 0 0 3em black;
+    text-shadow: 0 0 3em black;
 }
