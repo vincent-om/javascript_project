@@ -29,27 +29,27 @@
     </nav>
 
     <div class="container">
-        <div id="add-production-info">
-            <h1>Add Production Info</h1>
+        <div id="add-sell-info">
+            <h1>Add Sell Info</h1>
         </div>
         <div class="add-entry-form">
-            <form action="">
+            <form id="add-production-info-form">
                 <div class="prompt" class="d-flex flex-direction-col align-items-center">
                     <h2><span class="enter-todays">Enter today's</span> <span class="color-white">sales</span></h2>
                     <h1 class="color-white">DETAILS</h1>
                 </div>
                 <div class="particulars d-flex flex-direction-col">
                     <div class="d-flex flex-direction-row justify-content-space-between">
-                        <label for="customer-name">Customer Name</label>
-                        <input type="text" name="customer-name">
+                        <label for="customer-name">Customer ID</label>
+                        <input type="number" name="customer-name" placeholder="1 = Brookside, 2 = Other">
                     </div>
                     <div class="d-flex flex-direction-row justify-content-space-between">
                         <label for="quantity-sold">Quantity Sold</label>
-                        <input type="text" name="customer-name">
+                        <input type="number" name="quantity-sold" id="q-sold" placeholder="quantity in litres">
                     </div>
                     <div class="d-flex flex-direction-row justify-content-space-between">
                         <label for="selling-price">Selling Price</label>
-                        <input type="text" name="selling-price" value="45">
+                        <input type="number" name="selling-price" id="s-price" placeholder="price in Kshs">
                     </div>
 
                     <input type="submit" value="Submit Production Entry" class="submit">
@@ -63,10 +63,10 @@
     <div class="container display-none">
         <div>
             <div>
-                <h1 id="add-sell-info">Add Sell Info</h1>
+                <h1 id="add-production-info">Add Production Info</h1>
             </div>
             <div class="add-entry-form">
-                <form action="" class="d-flex flex-direction-col align-items-center">
+                <form action="" class="d-flex flex-direction-col align-items-center" id="add-sell-info-form">
                     <div class="prompt" class="d-flex flex-direction-col align-items-center">
                         <h2><span class="enter-todays">Enter today's</span> <span class="color-white">production</span></h2>
                         <h1 class="color-white">AMOUNT</h1>
@@ -99,6 +99,6 @@
         </div>
     </div>
 
-    <script src="./js/formProcessing.js"></script>
+    <script src="../js/formProcessing.js"></script>
 </body>
 </html>

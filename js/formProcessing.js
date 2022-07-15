@@ -73,8 +73,7 @@ let milkProduction = {
 
 let milkSellInfo = {
     '2022-06-11': {
-        1: {
-            customerName: "Brookside Diaries",
+        "Brookside Diaries": {
             amountInLiters: 2500,
             sellingPrice: 45
         },
@@ -114,7 +113,7 @@ let milkSellInfo = {
         } 
     },
 
-    '2022-06-14': {
+    '2022-06-4': {
         1: {
             customerName: "Brookside Diaries",
             amountInLiters: 2500,
@@ -227,7 +226,38 @@ let milkSellInfo = {
     }
 }
 
-for (const [shed, production] of Object.entries(milkProduction)) {
-    console.log(shed, production);
-}
+
+//----------------------------------------------------------------
+//Process Items in the Add Intry Page
+let productionEntryForm = document.querySelector('#add-production-info-form')
+productionEntryForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    
+    const customerID = productionEntryForm.elements['customer-name'].value;
+    const quantitySold = productionEntryForm.elements['quantity-sold'].value;
+    const price = productionEntryForm.elements['selling-price'].value;
+
+    let entryDate = new Date();
+    const todaysDate = entryDate.toISOString().split('T')[0];
+
+    if(quantitySold && price){
+        if (customerID == 1) {
+
+            const newEntry = {
+                customerName: 'Brookside Diaries',
+                amountInLiters: quantitySold,
+                sellingPrice: price
+            };
+
+            milkSellInfo[todaysDate] = {};
+            milkSellInfo[todaysDate][1]= newEntry;
+        }
+    }
+    console.log(milkSellInfo)
+})
+
+
+// for (const [shed, production] of Object.entries(milkProduction)) {
+//     console.log(shed, production);
+// }
   
