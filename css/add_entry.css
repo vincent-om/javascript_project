@@ -76,19 +76,22 @@ form .submit {
 }
 
 .go-to {
-    position: absolute;
+    position: relative;
+    color: white;
+    font-weight: 600;
+    top: 0.75em;
     cursor: pointer;
     width: min(80%, 30rem);
-    margin: auto;
-    /* margin-top: 0.5em;
+    margin-top: 0.5em;
     margin-left:auto;
-    margin-right: auto; */
+    margin-right: auto;
     /* text-align: center; */
-    padding: 0.5em 1em;
+    padding: 1em 1em;
     background-color: green;
-    opacity: 0.8;
     text-shadow: 0 0 0.1em white;
     border-radius: 0.5rem;
+
+    border: 0.1em solid rgba(255, 255, 255, 0.5);
 
     transition: all 0.1s ease-in-out;
 }
