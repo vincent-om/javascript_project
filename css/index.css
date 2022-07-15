@@ -54,8 +54,8 @@
 
 .bottom-container {
     position: relative;
-    top: 10%;
-    height: 80%;
+    top: 5%;
+    height: 95%;
     width: min(100% - 4rem, 70rem);
     margin: auto;
 }
