@@ -1,11 +1,48 @@
+.header {
+    color: white;
+    padding: 1em 0;
+    width: 80%;
+    margin: auto;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.footer {
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 3em;
+    padding: 1em 0;
+    width: 80%;
+    margin: auto;
+    border-radius: 1em;
+    border: 0.1em solid red;
+}
+
+#target-price-label {
+    color: white;
+    padding: 1rem;
+    background: green;
+    font-weight: 900;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+#target-price-input {
+    color: black;
+    padding: 1rem;
+    outline: none;
+    border: 0.1em solid green;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
 .details {
     background-color: rgba(0, 0, 0, 1);
     color: white;
     border-radius: 1rem;
     border: 0.1em solid red;
-    margin-top: 1em;
-    padding: 1.5em;
-    width: 20rem;
+    margin-top: 0.2em;
+    padding: 1.5rem;
 }
 
 .details .header {
@@ -24,34 +61,35 @@ nav > div {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    height: 100vh;
+    margin-top: min(20vw, 20vh);
+    display:grid;
+    place-items: center;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.container > div {
+    width: 60%;
+    margin: auto;
 }
 
 .outcome {
     background-color: rgba(0, 0, 0, 0.25);
     padding: 3em;
     border-radius: 1rem;
-}
-
-.actual-outcome {
-    transform: perspective(2em) rotateY(0.5deg);
-}
-
-.predicted-outcome {
-    transform: perspective(2em) rotateY(-0.5deg);
+    margin: auto;
 }
 
 .decorative {
-    width: 80%;
+    width: 100%;
     background-color: red;
     text-align: center;
     padding: 2rem;
     border-radius: 1em;
+}
+
+.particulars {
+    width: 9rem;
 }
 
 
