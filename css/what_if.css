@@ -1,0 +1,57 @@
+.details {
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    border-radius: 1rem;
+    border: 0.1em solid red;
+    margin-top: 1em;
+    padding: 1.5em;
+    width: 20rem;
+}
+
+.details .header {
+    font-weight: 900;
+    margin-bottom: 0.5em;
+    border-bottom: 0.1em solid white;
+}
+
+.white-shadow {
+    text-shadow: 0 0 0.1em white;
+}
+
+nav > div {
+    width: min(100% - 4rem, 70rem);
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 100vh;
+}
+
+.outcome {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 3em;
+    border-radius: 1rem;
+}
+
+.actual-outcome {
+    transform: perspective(2em) rotateY(0.5deg);
+}
+
+.predicted-outcome {
+    transform: perspective(2em) rotateY(-0.5deg);
+}
+
+.decorative {
+    width: 80%;
+    background-color: red;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1em;
+}
+
+
