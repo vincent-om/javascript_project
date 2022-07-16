@@ -77,7 +77,8 @@ let milkProduction = {
 
 let milkSellInfo = {
     1657962713399: {
-        "Brookside Diaries": {
+        1: {
+            customerName: "Brookside Diaries",
             amountInLiters: 2500,
             sellingPrice: 45
         },
@@ -241,12 +242,22 @@ let createReportButton = document.querySelector('#get-report-button')
 createReportButton.addEventListener('click', (e)=>{
     e.preventDefault();
         
+    let sevenMostRecentDays = [];
+
+    // Here we are at the first part, creating report details for production. The next will be
+    // adding the sales report (how much was sold to what customer and what profit was gained)
+    
     for (const [shed, productionDetails] of Object.entries(milkProduction)){
         let shedProductionDetailsForTheWeek = new Map(Object.entries(milkProduction[shed]));
         shedProductionDetailsForTheWeek = [...shedProductionDetailsForTheWeek].sort().reverse().slice(0, 7);
     
         let totalWeekProduction = 0;
         shedProductionDetailsForTheWeek.forEach(dateAndProductionQuantity =>{
+
+            if(sevenMostRecentDays.length < 7){
+                let currentDay = parseInt(dateAndProductionQuantity[0]);
+                sevenMostRecentDays.push(currentDay)
+            }
             let currentDayProductionQuantity = dateAndProductionQuantity[1];
             totalWeekProduction += currentDayProductionQuantity;
         });
@@ -259,11 +270,51 @@ createReportButton.addEventListener('click', (e)=>{
     </div>`
     }
 
+
+    // Here is the second part (Read the comment above to follow)
+
+    let brooksideTotalRevenue = 0;
+    let brooksideTotalQuatity = 0;
+
+    let otherTotalRevenue = 0;
+    let otherTotalQuantity = 0;
+
+    for (let i = 0; i < sevenMostRecentDays.length; i++){
+        let currentDay = sevenMostRecentDays[i];
+        
+        let quantitySoldToBrookside =  milkSellInfo[currentDay][1].amountInLiters;
+        let sellingPriceForBrookside = milkSellInfo[currentDay][1].sellingPrice;
+        let revenueFromSaleToBrookside = quantitySoldToBrookside * sellingPriceForBrookside;
+
+        brooksideTotalQuatity += quantitySoldToBrookside
+        brooksideTotalRevenue += revenueFromSaleToBrookside;
+
+
+        let quantitySoldToOther =  milkSellInfo[currentDay][2].amountInLiters;
+        let sellingPriceForOther = milkSellInfo[currentDay][2].sellingPrice;
+        let revenueFromSaleToOther = quantitySoldToOther * sellingPriceForOther;
+
+        otherTotalQuantity += quantitySoldToOther;
+        otherTotalRevenue += revenueFromSaleToOther;
+    }
+
+    let averagePriceForBrookside = Math.round(brooksideTotalRevenue/brooksideTotalQuatity);
+    let averageQuantityForBrookside = Math.round(brooksideTotalQuatity/7);
+    let averageRevenueForBrookside = Math.round(brooksideTotalRevenue/7);
+
+    let averagePriceForOther = Math.round(otherTotalRevenue/otherTotalQuantity);
+    let averageQuantityForOther = Math.round(otherTotalQuantity/7);
+    let averageRevenueForOther = Math.round(otherTotalRevenue/7);
+
+
+    // Now we add what we have calculated to the html file
+
     createReportButton.classList.toggle('display-none');
     productionReportHTML.innerHTML += `<div id="report-info" class="container">
     <div>
         <div id="report-header">
             <h1>Report</h1>
+            <p class="color-white">(All values are average daily)</p>
         </div>
         <div class="report-form">
             <div>
@@ -301,17 +352,17 @@ createReportButton.addEventListener('click', (e)=>{
                                 <div class="d-flex justify-content-space-between">
                                     <p>Quantity</p>
                                     <p>=</p>
-                                    <p>3455</p>
+                                    <p>${averageQuantityForBrookside}</p>
                                 </div>
                                 <div class="d-flex justify-content-space-between">
                                     <p>Price</p>
                                     <p>=</p>
-                                    <p>45</p>
+                                    <p>${averagePriceForBrookside}</p>
                                 </div>
                                 <div class="d-flex justify-content-space-between">
                                     <p>Revenue</p>
                                     <p>=</p>
-                                    <p>6343</p>
+                                    <p>${averageRevenueForBrookside}</p>
                                 </div>
                             </div>
                         </div>
@@ -322,17 +373,17 @@ createReportButton.addEventListener('click', (e)=>{
                                 <div class="d-flex justify-content-space-between">
                                     <p>Quantity</p>
                                     <p>=</p>
-                                    <p>3455</p>
+                                    <p>${averageQuantityForOther}</p>
                                 </div>
                                 <div class="d-flex justify-content-space-between">
                                     <p>Price</p>
                                     <p>=</p>
-                                    <p>45</p>
+                                    <p>${averagePriceForOther}</p>
                                 </div>
                                 <div class="d-flex justify-content-space-between">
                                     <p>Revenue</p>
                                     <p>=</p>
-                                    <p>6343</p>
+                                    <p>${averageRevenueForOther}</p>
                                 </div>
                             </div>
                         </div>
@@ -341,6 +392,5 @@ createReportButton.addEventListener('click', (e)=>{
             </div>
         </div>
     </div>    
-    </div>`;
-
+    </div>`;    
 });

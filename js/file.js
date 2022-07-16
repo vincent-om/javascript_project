@@ -73,7 +73,8 @@ let milkProduction = {
 
 let milkSellInfo = {
     1657962713399: {
-        "Brookside Diaries": {
+        1: {
+            customerName: "Brookside Diaries",
             amountInLiters: 2500,
             sellingPrice: 45
         },
