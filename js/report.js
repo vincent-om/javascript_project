@@ -83,7 +83,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 367,
             sellingPrice: 57
         } 
@@ -97,7 +97,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 378,
             sellingPrice: 68
         } 
@@ -111,7 +111,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 378,
             sellingPrice: 68
         } 
@@ -125,7 +125,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 687,
             sellingPrice: 68
         } 
@@ -139,7 +139,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 782,
             sellingPrice: 68
         } 
@@ -153,7 +153,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 468,
             sellingPrice: 68
         } 
@@ -167,7 +167,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 647,
             sellingPrice: 68
         } 
@@ -181,7 +181,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 958,
             sellingPrice: 68
         } 
@@ -195,7 +195,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 978,
             sellingPrice: 68
         } 
@@ -209,7 +209,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 878,
             sellingPrice: 68
         } 
@@ -223,7 +223,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 978,
             sellingPrice: 68
         } 

@@ -79,7 +79,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 367,
             sellingPrice: 57
         } 
@@ -93,7 +93,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 378,
             sellingPrice: 68
         } 
@@ -107,7 +107,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 378,
             sellingPrice: 68
         } 
@@ -121,7 +121,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 687,
             sellingPrice: 68
         } 
@@ -135,7 +135,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 782,
             sellingPrice: 68
         } 
@@ -149,7 +149,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 468,
             sellingPrice: 68
         } 
@@ -163,7 +163,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 647,
             sellingPrice: 68
         } 
@@ -177,7 +177,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 958,
             sellingPrice: 68
         } 
@@ -191,7 +191,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 978,
             sellingPrice: 68
         } 
@@ -205,7 +205,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 878,
             sellingPrice: 68
         } 
@@ -219,7 +219,7 @@ let milkSellInfo = {
         },
 
         2: {
-            customerName: "Local Market",
+            customerName: "Other",
             amountInLiters: 978,
             sellingPrice: 68
         } 
@@ -319,106 +319,3 @@ let changeFormDisplayed = function(){
 
 goToProductionInfo.addEventListener('click', changeFormDisplayed);
 goToSaleInfo.addEventListener('click', changeFormDisplayed);
-
-
-//----------------------------------------------------------------
-// PROCESS THE REPORT
-
-
-let productionReportHTML = document.querySelector('#report-html-page #report-container')
-let createReportButton = document.querySelector('report-html-page #get-report-button')
-
-createReportButton.addEventListener('click', (e)=>{
-    e.preventDefault();
-    alert("What the fuck did you click")
-})
-
-// let productionReportDetails = ``;
-
-// let htmlContent = `<div id="report-info" class="container display-none">
-// <div>
-//     <div id="report-header">
-//         <h1>Report</h1>
-//     </div>
-//     <div class="report-form">
-//         <div>
-//             <div class="prompt" class="d-flex flex-direction-col align-items-center">
-//                 <h2><span class="white-shadow">This Week's</span> <span class="color-white">Average</span></h2>
-//                 <h1 class="color-white text-align-center text-align-center">PRODUCTION</h1>
-//             </div>
-//             <div class="details">
-//                 <div class="d-flex flex-direction-col">
-//                     <div class="header d-flex flex-direction-row justify-content-space-between">
-//                         <div>Shed</div>
-//                         <div>Details</div>
-//                     </div>
-//                     ${productionReportDetails}
-//                 </div>
-//             </div>
-//         </div>
-
-//         <div>
-//             <div class="d-flex flex-direction-col align-items-center">
-//                 <h2><span class="white-shadow">This Week's</span> <span class="color-white">Average</span></h2>
-//                 <h1 class="color-white text-align-center">SALES</h1>
-//             </div>
-
-//             <div class="details">
-//                 <div class="d-flex flex-direction-col">
-//                     <div class="header d-flex flex-direction-row justify-content-space-between">
-//                         <div>Customer</div>
-//                         <div>Details</div>
-//                     </div>
-
-//                     <div class="customer d-flex flex-direction-row justify-content-space-between">
-//                         <div class="customer-name">Brookside Diaries</div>
-//                         <div class="particulars">
-//                             <div class="d-flex justify-content-space-between">
-//                                 <p>Quantity</p>
-//                                 <p>=</p>
-//                                 <p>3455</p>
-//                             </div>
-//                             <div class="d-flex justify-content-space-between">
-//                                 <p>Price</p>
-//                                 <p>=</p>
-//                                 <p>45</p>
-//                             </div>
-//                             <div class="d-flex justify-content-space-between">
-//                                 <p>Revenue</p>
-//                                 <p>=</p>
-//                                 <p>6343</p>
-//                             </div>
-//                         </div>
-//                     </div>
-                    
-//                     <div class="customer d-flex flex-direction-row justify-content-space-between">
-//                         <div class="customer-name">The Market</div>
-//                         <div class="particulars">
-//                             <div class="d-flex justify-content-space-between">
-//                                 <p>Quantity</p>
-//                                 <p>=</p>
-//                                 <p>3455</p>
-//                             </div>
-//                             <div class="d-flex justify-content-space-between">
-//                                 <p>Price</p>
-//                                 <p>=</p>
-//                                 <p>45</p>
-//                             </div>
-//                             <div class="d-flex justify-content-space-between">
-//                                 <p>Revenue</p>
-//                                 <p>=</p>
-//                                 <p>6343</p>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-// </div>    
-// </div>`
-
-// for (const [shed, production] of Object.entries(milkProduction)) {
-//     console.log(shed, production);
-// }
-  
