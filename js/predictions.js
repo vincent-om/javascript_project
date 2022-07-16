@@ -22,7 +22,7 @@ let incomeOverTime = function(sellingPrice, time){
     }
 
     else if (time === 'Yearly') {
-        return sellingPrice * dailyQuantitySoldToBrookside * 366;
+        return sellingPrice * dailyQuantitySoldToBrookside * 366; //366 because the year in question is a leap year
     }
 
     else if (time === 'Monthly') {
@@ -166,6 +166,4 @@ predictionsForm.addEventListener('keyup', (e) =>{
 
 let reportFormInfo = document.querySelector('.report-form');
 reportFormInfo.innerHTML = htmlContent;
-// reportFormInfo.classList.toggle('display-none')
-
 })
