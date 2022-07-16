@@ -230,17 +230,20 @@ let milkSellInfo = {
 //----------------------------------------------------------------
 //PROCESS THE ADD QUERY PAGE
 
-let productionEntryForm = document.querySelector('#add-production-info-form')
 
-productionEntryForm.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    
-    const customerID = productionEntryForm.elements['customer-name'].value;
-    const quantitySold = productionEntryForm.elements['quantity-sold'].value;
-    const price = productionEntryForm.elements['selling-price'].value;
+let entryDate = new Date();
+const todaysDate = entryDate.toISOString().split('T')[0];
 
-    let entryDate = new Date();
-    const todaysDate = entryDate.toISOString().split('T')[0];
+
+//  Add milk production info
+
+let productionEntryForm = document.querySelector('#add-sale-info-form')
+
+productionEntryForm.addEventListener('submit', (e)=>{    
+    const customerID = parseInt(productionEntryForm.elements['customer-name'].value);
+    const quantitySold = parseInt(productionEntryForm.elements['quantity-sold'].value);
+    const price = parseInt(productionEntryForm.elements['selling-price'].value);
+
 
     if(quantitySold && price){
         if (customerID == 1) {
@@ -254,10 +257,70 @@ productionEntryForm.addEventListener('submit', (e)=>{
             milkSellInfo[todaysDate] = {};
             milkSellInfo[todaysDate][1]= newEntry;
         }
+
+        else if (customerID == 2) {
+            const newEntry = {
+                customerName: 'Other',
+                amountInLiters: quantitySold,
+                sellingPrice: price
+            };
+
+            milkSellInfo[todaysDate] = {};
+            milkSellInfo[todaysDate][2] = newEntry;           
+        }
+
+        else {
+            alert('Please Enter either 1 or 2 as the customer ID')
+        }     
     }
-    console.log(milkSellInfo)
+
+    window.open('./entry_success.html');
 })
 
+
+//  Add milk sale info
+
+let saleEntryForm = document.querySelector('#add-production-info-form')
+
+saleEntryForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+    const shedAProductionQuantity = parseInt(saleEntryForm.elements['shed-a-amount'].value);
+    const shedBProductionQuantity = parseInt(saleEntryForm.elements['shed-b-amount'].value);
+    const shedCProductionQuantity = parseInt(saleEntryForm.elements['shed-c-amount'].value);
+    const shedDProductionQuantity = parseInt(saleEntryForm.elements['shed-d-amount'].value);
+    const shedEProductionQuantity = parseInt(saleEntryForm.elements['shed-e-amount'].value);
+
+    milkProduction.shedA[todaysDate] = shedAProductionQuantity;
+    milkProduction.shedB[todaysDate] = shedBProductionQuantity;
+    milkProduction.shedC[todaysDate] = shedCProductionQuantity;
+    milkProduction.shedD[todaysDate] = shedDProductionQuantity;
+    milkProduction.shedE[todaysDate] = shedEProductionQuantity;
+
+    window.open('./entry_success.html');
+})
+
+
+// Process the button that switches between adding sales information and production information
+
+//  a) We first start with the one that switches from production info to sales info
+let goToSaleInfo = document.querySelector('#go-to-sale-info');
+let goToProductionInfo = document.querySelector('#go-to-production-info');
+
+let addSaleInfo = document.querySelector('#add-sale-info-div');
+let addProductionInfo = document.querySelector('#add-production-info-div');
+
+addProductionInfo.classList.toggle('display-none')
+
+let changeFormDisplayed = function(){
+    addSaleInfo.classList.toggle('display-none');
+    addProductionInfo.classList.toggle('display-none');
+
+    return true;
+}
+
+goToProductionInfo.addEventListener('click', changeFormDisplayed);
+goToSaleInfo.addEventListener('click', changeFormDisplayed);
 
 // for (const [shed, production] of Object.entries(milkProduction)) {
 //     console.log(shed, production);
