@@ -256,7 +256,7 @@ productionEntryForm.addEventListener('submit', (e)=>{
         milkSellInfo[todaysDate] = {};
         milkSellInfo[todaysDate][1]= newEntry;
 
-        window.open('./entry_success.html');
+        alert('submission successful')
     }
 
     else if (customerID == 2) {
@@ -267,9 +267,9 @@ productionEntryForm.addEventListener('submit', (e)=>{
         };
 
         milkSellInfo[todaysDate] = {};
-        milkSellInfo[todaysDate][2] = newEntry;  
-        
-        window.open('./entry_success.html');
+        milkSellInfo[todaysDate][2] = newEntry;
+
+        alert('submission successful')        
     }
 
     else {
