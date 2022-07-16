@@ -245,36 +245,36 @@ productionEntryForm.addEventListener('submit', (e)=>{
     const price = parseInt(productionEntryForm.elements['selling-price'].value);
 
 
-    if(quantitySold && price){
-        if (customerID == 1) {
+    if (customerID == 1) {
 
-            const newEntry = {
-                customerName: 'Brookside Diaries',
-                amountInLiters: quantitySold,
-                sellingPrice: price
-            };
+        const newEntry = {
+            customerName: 'Brookside Diaries',
+            amountInLiters: quantitySold,
+            sellingPrice: price
+        };
 
-            milkSellInfo[todaysDate] = {};
-            milkSellInfo[todaysDate][1]= newEntry;
-        }
+        milkSellInfo[todaysDate] = {};
+        milkSellInfo[todaysDate][1]= newEntry;
 
-        else if (customerID == 2) {
-            const newEntry = {
-                customerName: 'Other',
-                amountInLiters: quantitySold,
-                sellingPrice: price
-            };
-
-            milkSellInfo[todaysDate] = {};
-            milkSellInfo[todaysDate][2] = newEntry;           
-        }
-
-        else {
-            alert('Please Enter either 1 or 2 as the customer ID')
-        }     
+        window.open('./entry_success.html');
     }
 
-    window.open('./entry_success.html');
+    else if (customerID == 2) {
+        const newEntry = {
+            customerName: 'Other',
+            amountInLiters: quantitySold,
+            sellingPrice: price
+        };
+
+        milkSellInfo[todaysDate] = {};
+        milkSellInfo[todaysDate][2] = newEntry;  
+        
+        window.open('./entry_success.html');
+    }
+
+    else {
+        alert('Please Enter either 1 or 2 as the customer ID')
+    }     
 })
 
 
@@ -303,7 +303,6 @@ saleEntryForm.addEventListener('submit', (e)=>{
 
 // Process the button that switches between adding sales information and production information
 
-//  a) We first start with the one that switches from production info to sales info
 let goToSaleInfo = document.querySelector('#go-to-sale-info');
 let goToProductionInfo = document.querySelector('#go-to-production-info');
 
@@ -321,6 +320,11 @@ let changeFormDisplayed = function(){
 
 goToProductionInfo.addEventListener('click', changeFormDisplayed);
 goToSaleInfo.addEventListener('click', changeFormDisplayed);
+
+
+//----------------------------------------------------------------
+// PROCESS THE REPORT
+
 
 // for (const [shed, production] of Object.entries(milkProduction)) {
 //     console.log(shed, production);
