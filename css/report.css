@@ -22,7 +22,7 @@ body {
     border-top-left-radius: 1rem;
 }
 
-.get-report {
+#get-report-button {
     cursor: pointer;
     text-align: center;
     color: white;
