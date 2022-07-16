@@ -368,7 +368,7 @@ createReportButton.addEventListener('click', (e)=>{
                         </div>
                         
                         <div class="customer d-flex flex-direction-row justify-content-space-between">
-                            <div class="customer-name">The Market</div>
+                            <div class="customer-name">Other</div>
                             <div class="particulars">
                                 <div class="d-flex justify-content-space-between">
                                     <p>Quantity</p>
