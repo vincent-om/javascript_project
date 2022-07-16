@@ -32,8 +32,8 @@
         <div class="header">
             <h1 class="text-align-center">What's the target Price on your mind?</h1>
         </div>
-        <form action="">
-            <label for="target-price" id="target-price-label">Target Price</label>
+        <form id="what-if-price-form">
+            <label for="target-price" id="target-price-label">Price/Ltr</label>
             <input type="number" name="target-price" id="target-price-input">
         </form>
 
@@ -46,10 +46,10 @@
                 <div class="details">
                     <div class="d-flex flex-direction-col">
                         <div class="customer d-flex flex-direction-row justify-content-space-between">
-                            <div class="particulars">
+                            <div class="particulars" id="actual-particulars">
                                 <div class="d-flex justify-content-space-between">
                                     <p>Quantity</p>
-                                    <p>3455</p>
+                                    <p>2500</p>
                                 </div>
                                 <div class="d-flex justify-content-space-between">
                                     <p>Price</p>
@@ -57,7 +57,7 @@
                                 </div>
                                 <div class="d-flex justify-content-space-between">
                                     <p>Revenue</p>
-                                    <p>6343</p>
+                                    <p>112500</p>
                                 </div>
                             </div>
                         </div>
@@ -73,18 +73,18 @@
                 <div class="details">
                     <div class="d-flex flex-direction-col">
                         <div class="customer d-flex flex-direction-row justify-content-space-between">
-                            <div class="particulars">
+                            <div class="particulars" id="what-if-particulars">
                                 <div class="d-flex justify-content-space-between">
                                     <p>Quantity</p>
-                                    <p>3455</p>
+                                    <p>2500</p>
                                 </div>
                                 <div class="d-flex justify-content-space-between">
                                     <p>Price</p>
-                                    <p>45</p>
+                                    <p id="user-inputted-price">45</p>
                                 </div>
                                 <div class="d-flex justify-content-space-between">
                                     <p>Revenue</p>
-                                    <p>6343</p>
+                                    <p id="user-inputted-revenue">112500</p>
                                 </div>
                             </div>
                         </div>
@@ -95,10 +95,10 @@
 
         <div class="footer bg-dark">
             <h1 class="text-align-center">At that target Price</h1>
-            <p class="text-align-center">You will earn <strong>500</strong> <em>less</em> than what you actually earned</p>
+            <p class="text-align-center">You will earn <strong id="amount-difference">500</strong> <em id="less-or-more">less</em> than what you actually earned</p>
         </div>
     </div>
 
 </body>
-<script src="../js/file.js"></script>
+<script src="../js/what_if.js"></script>
 </html>

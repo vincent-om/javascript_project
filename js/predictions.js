@@ -64,7 +64,7 @@ predictionsForm.addEventListener('keyup', (e) =>{
 
     let priceEntered = predictionsForm.elements['price'].value;
 
-    if (priceEntered > 10000){
+    if (priceEntered > 1000){
         alert('please input a reasonable price')
         sellingPrice = 45;
     }
