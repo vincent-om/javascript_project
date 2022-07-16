@@ -22,7 +22,7 @@ let incomeOverTime = function(sellingPrice, time){
     }
 
     else if (time === 'Yearly') {
-        return sellingPrice * 366;
+        return sellingPrice * dailyQuantitySoldToBrookside * 366;
     }
 
     else if (time === 'Monthly') {
@@ -62,11 +62,12 @@ predictionsForm.addEventListener('keyup', (e) =>{
 
 
 
-    let priceEntered = predictionsForm.elements['price'].value;
+    let priceEntered = parseFloat(predictionsForm.elements['price'].value);
 
     if (priceEntered > 1000){
         alert('please input a reasonable price')
-        sellingPrice = 45;
+        predictionsForm.elements['price'].value = 0;
+        priceEntered = 0;
     }
 
     let dailyRevenue = incomeOverTime(priceEntered, 'Daily');
