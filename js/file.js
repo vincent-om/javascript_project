@@ -324,10 +324,8 @@ goToSaleInfo.addEventListener('click', changeFormDisplayed);
 //----------------------------------------------------------------
 // PROCESS THE REPORT
 
-
-for (const [shed, productionDetails] of Object.entries(milkProduction)) {
-    const shedDetailsMap = new Map(Object.entries(milkProduction[shed]));
-
+let myFunc = function (){
+    alert("currently loading data")
 }
 
 // for (const [shed, production] of Object.entries(milkProduction)) {

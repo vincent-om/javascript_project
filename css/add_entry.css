@@ -4,10 +4,6 @@ body {
     justify-content: center;
 }
 
-.display-none {
-    display: none;
-}
-
 #add-production-info, #add-sell-info {
     text-align: center;
     background-color: green;
