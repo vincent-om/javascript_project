@@ -228,8 +228,10 @@ let milkSellInfo = {
 
 
 //----------------------------------------------------------------
-//Process Items in the Add Intry Page
+//PROCESS THE ADD QUERY PAGE
+
 let productionEntryForm = document.querySelector('#add-production-info-form')
+
 productionEntryForm.addEventListener('submit', (e)=>{
     e.preventDefault();
     
