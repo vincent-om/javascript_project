@@ -1,5 +1,6 @@
 .details {
-    width: 23rem;
+    width: 24rem;
+    font-size: 0.9rem;
 }
 
 #predictions-header {
@@ -10,4 +11,13 @@
     padding: 1em;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
+}
+
+form {
+    margin: 1em;
+}
+
+form input, form label {
+    padding: 0.5em;
+    outline:none;
 }
