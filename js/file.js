@@ -297,7 +297,7 @@ saleEntryForm.addEventListener('submit', (e)=>{
     milkProduction['shed D'][todaysDate] = shedDProductionQuantity;
     milkProduction['shed E'][todaysDate] = shedEProductionQuantity;
 
-    window.open('./entry_success.html');
+    alert('submission successful');
 });
 
 
