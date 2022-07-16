@@ -351,17 +351,14 @@ createReportButton.addEventListener('click', (e)=>{
                             <div class="particulars">
                                 <div class="d-flex justify-content-space-between">
                                     <p>Quantity</p>
-                                    <p>=</p>
                                     <p>${averageQuantityForBrookside}</p>
                                 </div>
                                 <div class="d-flex justify-content-space-between">
                                     <p>Price</p>
-                                    <p>=</p>
                                     <p>${averagePriceForBrookside}</p>
                                 </div>
                                 <div class="d-flex justify-content-space-between">
                                     <p>Revenue</p>
-                                    <p>=</p>
                                     <p>${averageRevenueForBrookside}</p>
                                 </div>
                             </div>
@@ -372,17 +369,14 @@ createReportButton.addEventListener('click', (e)=>{
                             <div class="particulars">
                                 <div class="d-flex justify-content-space-between">
                                     <p>Quantity</p>
-                                    <p>=</p>
                                     <p>${averageQuantityForOther}</p>
                                 </div>
                                 <div class="d-flex justify-content-space-between">
                                     <p>Price</p>
-                                    <p>=</p>
                                     <p>${averagePriceForOther}</p>
                                 </div>
                                 <div class="d-flex justify-content-space-between">
                                     <p>Revenue</p>
-                                    <p>=</p>
                                     <p>${averageRevenueForOther}</p>
                                 </div>
                             </div>
