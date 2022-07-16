@@ -12,7 +12,7 @@ body {
     flex-basis: 30%;
 }
 
-#recap-header {
+#report-header {
     text-align: center;
     background-color: green;
     width: min(80%, 30rem);
