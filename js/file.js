@@ -1,5 +1,5 @@
 let milkProduction = {
-    shedA: {
+    'shed A': {
         1657962713399: 676,
         1657876313399: 589,
         1657703513399: 484,
@@ -13,7 +13,7 @@ let milkProduction = {
         1653210713399: 455,
     },
 
-    shedB: {
+    'shed B': {
         1657962713399: 476,
         1657876313399: 385,
         1657703513399: 383,
@@ -27,7 +27,7 @@ let milkProduction = {
         1653210713399: 352,
     },
 
-    shedC: {
+    'shed C': {
         1657962713399: 464,
         1657876313399: 324,
         1657703513399: 375,
@@ -41,7 +41,7 @@ let milkProduction = {
         1653210713399: 331,
     },
 
-    shedD: {
+    'shed D': {
         1657962713399: 431,
         1657876313399: 332,
         1657703513399: 365,
@@ -55,7 +55,7 @@ let milkProduction = {
         1653210713399: 363,
     },
 
-    shedE: {
+    'shed E': {
         1657962713399: 413,
         1657876313399: 386,
         1657703513399: 397,
@@ -290,14 +290,14 @@ saleEntryForm.addEventListener('submit', (e)=>{
     const shedDProductionQuantity = parseInt(saleEntryForm.elements['shed-d-amount'].value);
     const shedEProductionQuantity = parseInt(saleEntryForm.elements['shed-e-amount'].value);
 
-    milkProduction.shedA[todaysDate] = shedAProductionQuantity;
-    milkProduction.shedB[todaysDate] = shedBProductionQuantity;
-    milkProduction.shedC[todaysDate] = shedCProductionQuantity;
-    milkProduction.shedD[todaysDate] = shedDProductionQuantity;
-    milkProduction.shedE[todaysDate] = shedEProductionQuantity;
+    milkProduction['shed A'][todaysDate] = shedAProductionQuantity;
+    milkProduction['shed B'][todaysDate] = shedBProductionQuantity;
+    milkProduction['shed C'][todaysDate] = shedCProductionQuantity;
+    milkProduction['shed D'][todaysDate] = shedDProductionQuantity;
+    milkProduction['shed E'][todaysDate] = shedEProductionQuantity;
 
     window.open('./entry_success.html');
-})
+});
 
 
 // Process the button that switches between adding sales information and production information
@@ -324,6 +324,11 @@ goToSaleInfo.addEventListener('click', changeFormDisplayed);
 //----------------------------------------------------------------
 // PROCESS THE REPORT
 
+
+for (const [shed, productionDetails] of Object.entries(milkProduction)) {
+    const shedDetailsMap = new Map(Object.entries(milkProduction[shed]));
+
+}
 
 // for (const [shed, production] of Object.entries(milkProduction)) {
 //     console.log(shed, production);
