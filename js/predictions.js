@@ -59,16 +59,20 @@ let incomeOverTime = function(sellingPrice, time){
 let predictionsForm = document.querySelector('#input-value-and-time-form')
 
 predictionsForm.addEventListener('keyup', (e) =>{
-
-
-
     let priceEntered = parseFloat(predictionsForm.elements['price'].value);
 
     if (priceEntered > 1000){
-        alert('please input a reasonable price')
+        alert('please input a reasonable price \n milk can\'be sold for such a high amount')
         predictionsForm.elements['price'].value = 0;
         priceEntered = 0;
-    }
+    }  
+})
+
+predictionsForm.addEventListener('submit', (e) =>{
+
+    e.preventDefault()
+
+    let priceEntered = parseFloat(predictionsForm.elements['price'].value);
 
     let dailyRevenue = incomeOverTime(priceEntered, 'Daily');
     let weeklyRevenue = incomeOverTime(priceEntered, 'Weekly');
