@@ -257,6 +257,7 @@ productionEntryForm.addEventListener('submit', (e)=>{
         milkSellInfo[todaysDate][1]= newEntry;
 
         alert('submission successful')
+        alert('please note that entries without values are assumed to be zero')
     }
 
     else if (customerID == 2) {
@@ -269,7 +270,8 @@ productionEntryForm.addEventListener('submit', (e)=>{
         milkSellInfo[todaysDate] = {};
         milkSellInfo[todaysDate][2] = newEntry;
 
-        alert('submission successful')        
+        alert('submission successful')
+        alert('please note that entries without values are assumed to be zero')       
     }
 
     else {
@@ -298,6 +300,7 @@ saleEntryForm.addEventListener('submit', (e)=>{
     milkProduction['shed E'][todaysDate] = shedEProductionQuantity;
 
     alert('submission successful');
+    alert('please note that entries without values are assumed to be zero')
 });
 
 
