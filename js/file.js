@@ -237,12 +237,12 @@ const todaysDate = Number(new Date());
 
 //  Add milk production info
 
-let productionEntryForm = document.querySelector('#add-sale-info-form')
+let saleEntryForm = document.querySelector('#add-sale-info-form')
 
-productionEntryForm.addEventListener('submit', (e)=>{    
-    const customerID = parseInt(productionEntryForm.elements['customer-name'].value);
-    const quantitySold = parseInt(productionEntryForm.elements['quantity-sold'].value);
-    const price = parseInt(productionEntryForm.elements['selling-price'].value);
+saleEntryForm.addEventListener('submit', (e)=>{    
+    const customerID = parseInt(saleEntryForm.elements['customer-name'].value);
+    const quantitySold = parseInt(saleEntryForm.elements['quantity-sold'].value);
+    const price = parseInt(saleEntryForm.elements['selling-price'].value);
 
 
     if (customerID == 1) {
@@ -282,16 +282,16 @@ productionEntryForm.addEventListener('submit', (e)=>{
 
 //  Add milk sale info
 
-let saleEntryForm = document.querySelector('#add-production-info-form')
+let productionEntryForm = document.querySelector('#add-production-info-form')
 
-saleEntryForm.addEventListener('submit', (e)=>{
+productionEntryForm.addEventListener('submit', (e)=>{
     e.preventDefault();
 
-    const shedAProductionQuantity = parseInt(saleEntryForm.elements['shed-a-amount'].value);
-    const shedBProductionQuantity = parseInt(saleEntryForm.elements['shed-b-amount'].value);
-    const shedCProductionQuantity = parseInt(saleEntryForm.elements['shed-c-amount'].value);
-    const shedDProductionQuantity = parseInt(saleEntryForm.elements['shed-d-amount'].value);
-    const shedEProductionQuantity = parseInt(saleEntryForm.elements['shed-e-amount'].value);
+    const shedAProductionQuantity = parseInt(productionEntryForm.elements['shed-a-amount'].value);
+    const shedBProductionQuantity = parseInt(productionEntryForm.elements['shed-b-amount'].value);
+    const shedCProductionQuantity = parseInt(productionEntryForm.elements['shed-c-amount'].value);
+    const shedDProductionQuantity = parseInt(productionEntryForm.elements['shed-d-amount'].value);
+    const shedEProductionQuantity = parseInt(productionEntryForm.elements['shed-e-amount'].value);
 
     milkProduction['shed A'][todaysDate] = shedAProductionQuantity;
     milkProduction['shed B'][todaysDate] = shedBProductionQuantity;
