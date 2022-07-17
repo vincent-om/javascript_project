@@ -275,7 +275,7 @@ createReportButton.addEventListener('click', (e)=>{
     }
 
     productionReportDetails += `<div class="d-flex flex-direction-row justify-content-space-between">
-    <div class="margin-1em text-align-center"><strong>Total: ${totalDailyAverageProduction} liters per day</strong></div>
+    <div class="margin-top-01em text-align-center"><strong>Total: ${totalDailyAverageProduction} liters per day</strong></div>
     </div>`
 
     // Here is the second part (Read the comment above to follow)
@@ -326,7 +326,7 @@ createReportButton.addEventListener('click', (e)=>{
         <div class="report-form">
             <div>
                 <div class="prompt" class="d-flex flex-direction-col align-items-center">
-                    <h2><span class="white-shadow">This Week's</span> <span class="color-white">Average</span></h2>
+                    <h2><span class="white-shadow margin-top-1em">This Week's</span> <span class="color-white">Average</span></h2>
                     <h1 class="color-white text-align-center text-align-center">PRODUCTION</h1>
                 </div>
                 <div class="details">
