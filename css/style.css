@@ -27,7 +27,7 @@ body {
     background-image: url(../assets/cow.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
