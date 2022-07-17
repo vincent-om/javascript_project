@@ -76,3 +76,20 @@
 #farm-name {
     border-bottom: 0.1em solid green;
 }
+
+
+/* MAKE THE PAGE RESPONSIVE  */
+@media screen and (max-width: 1000px) {
+    :root {
+        font-size: 10px;
+    }
+
+    #welcome-text {
+        text-align: center;
+    }
+
+    .icon {
+        position: static;
+        margin: auto;
+    }
+}

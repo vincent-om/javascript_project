@@ -65,6 +65,7 @@ body {
 .d-flex {display: flex;}
 .flex-direction-row {flex-direction: row;}
 .flex-direction-col {flex-direction: column;}
+.flex-wrap-wrap {flex-wrap: wrap;}
 .justify-content-center {justify-content: center;}
 .justify-content-space-between {justify-content: space-between;}
 .justify-content-space-around {justify-content: space-around;}
@@ -101,6 +102,7 @@ ul {
 .btn {
     background-color: green;
     padding: 0.5em 1.5em;
+    margin: 0.5em;
 }
 
 .btn:hover {

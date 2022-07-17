@@ -21,3 +21,15 @@ form input, form label {
     padding: 0.5em;
     outline:none;
 }
+
+
+/* MAKE THE PAGE RESPONSIVE  */
+@media screen and (max-width: 1000px) {
+    :root {
+        font-size: 10px;
+    }
+
+    .particulars div {
+        flex-direction: column;
+    }
+}

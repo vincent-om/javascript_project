@@ -95,3 +95,16 @@ form .submit {
 .go-to:hover {
     opacity: 0.9;
 }
+
+
+
+/* MAKE THE PAGE RESPONSIVE  */
+@media screen and (max-width: 1000px) {
+    :root {
+        font-size: 10px;
+    }
+
+    .particulars div {
+        flex-direction: column;
+    }
+}

@@ -93,3 +93,11 @@ body {
 .white-shadow {
     text-shadow: 0 0 0.1em white;
 }
+
+
+/* MAKE THE PAGE RESPONSIVE  */
+@media screen and (max-width: 1000px) {
+    :root {
+        font-size: 10px;
+    }
+}
