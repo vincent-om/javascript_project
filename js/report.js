@@ -79,7 +79,7 @@ let milkSellInfo = {
     1657962713399: {
         1: {
             customerName: "Brookside Diaries",
-            amountInLiters: 2500,
+            amountInLiters: 2000,
             sellingPrice: 45
         },
 
@@ -93,7 +93,7 @@ let milkSellInfo = {
     1657876313399: {
         1: {
             customerName: "Brookside Diaries",
-            amountInLiters: 2500,
+            amountInLiters: 2000,
             sellingPrice: 45
         },
 
@@ -107,7 +107,7 @@ let milkSellInfo = {
     1657703513399: {
         1: {
             customerName: "Brookside Diaries",
-            amountInLiters: 2500,
+            amountInLiters: 2000,
             sellingPrice: 45
         },
 
@@ -121,13 +121,13 @@ let milkSellInfo = {
     1657444313399: {
         1: {
             customerName: "Brookside Diaries",
-            amountInLiters: 2500,
+            amountInLiters: 2000,
             sellingPrice: 45
         },
 
         2: {
             customerName: "Other",
-            amountInLiters: 687,
+            amountInLiters: 487,
             sellingPrice: 68
         } 
     },
@@ -135,13 +135,13 @@ let milkSellInfo = {
     1657098713399: {
         1: {
             customerName: "Brookside Diaries",
-            amountInLiters: 2500,
+            amountInLiters: 2000,
             sellingPrice: 45
         },
 
         2: {
             customerName: "Other",
-            amountInLiters: 782,
+            amountInLiters: 482,
             sellingPrice: 68
         } 
     },
@@ -149,7 +149,7 @@ let milkSellInfo = {
     1656666713399: {
         1: {
             customerName: "Brookside Diaries",
-            amountInLiters: 2500,
+            amountInLiters: 2000,
             sellingPrice: 45
         },
 
@@ -163,13 +163,13 @@ let milkSellInfo = {
     1656148313399: {
         1: {
             customerName: "Brookside Diaries",
-            amountInLiters: 2500,
+            amountInLiters: 2000,
             sellingPrice: 45
         },
 
         2: {
             customerName: "Other",
-            amountInLiters: 647,
+            amountInLiters: 447,
             sellingPrice: 68
         } 
     },
@@ -177,13 +177,13 @@ let milkSellInfo = {
     1655543513399: {
         1: {
             customerName: "Brookside Diaries",
-            amountInLiters: 2500,
+            amountInLiters: 2000,
             sellingPrice: 45
         },
 
         2: {
             customerName: "Other",
-            amountInLiters: 958,
+            amountInLiters: 558,
             sellingPrice: 68
         } 
     },
@@ -191,13 +191,13 @@ let milkSellInfo = {
     1654852313399: {
         1: {
             customerName: "Brookside Diaries",
-            amountInLiters: 2500,
+            amountInLiters: 2000,
             sellingPrice: 45
         },
 
         2: {
             customerName: "Other",
-            amountInLiters: 978,
+            amountInLiters: 578,
             sellingPrice: 68
         } 
     },
@@ -205,13 +205,13 @@ let milkSellInfo = {
     1654074713399: {
         1: {
             customerName: "Brookside Diaries",
-            amountInLiters: 2500,
+            amountInLiters: 2000,
             sellingPrice: 45
         },
 
         2: {
             customerName: "Other",
-            amountInLiters: 878,
+            amountInLiters: 578,
             sellingPrice: 68
         } 
     },
@@ -219,13 +219,13 @@ let milkSellInfo = {
     1653210713399: {
         1: {
             customerName: "Brookside Diaries",
-            amountInLiters: 2500,
+            amountInLiters: 2000,
             sellingPrice: 45
         },
 
         2: {
             customerName: "Other",
-            amountInLiters: 978,
+            amountInLiters: 578,
             sellingPrice: 68
         } 
     }
@@ -247,6 +247,8 @@ createReportButton.addEventListener('click', (e)=>{
     // Here we are at the first part, creating report details for production. The next will be
     // adding the sales report (how much was sold to what customer and what profit was gained)
     
+    let totalDailyAverageProduction = 0;
+
     for (const [shed, productionDetails] of Object.entries(milkProduction)){
         let shedProductionDetailsForTheWeek = new Map(Object.entries(milkProduction[shed]));
         shedProductionDetailsForTheWeek = [...shedProductionDetailsForTheWeek].sort().reverse().slice(0, 7);
@@ -267,9 +269,14 @@ createReportButton.addEventListener('click', (e)=>{
         productionReportDetails += `<div class="d-flex flex-direction-row justify-content-space-between">
         <div>${shed}: </div>
         <div>${averageDailyProductionQuantity} liters per day</div>
-    </div>`
+        </div>`
+        
+        totalDailyAverageProduction += averageDailyProductionQuantity;
     }
 
+    productionReportDetails += `<div class="d-flex flex-direction-row justify-content-space-between">
+    <div class="margin-1em text-align-center"><strong>Total: ${totalDailyAverageProduction} liters per day</strong></div>
+    </div>`
 
     // Here is the second part (Read the comment above to follow)
 
